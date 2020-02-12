@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cuzzapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cuzzapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cuzzapipelinesjavascriptdocker 
+          image: benccontainerregistry.azurecr.io/cuzzapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
